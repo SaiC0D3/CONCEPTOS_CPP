@@ -15,10 +15,11 @@ int main() {
 
     int **puntero = new int*; // En este caso, 'puntero' almacena la direccion de memoria de otro puntero, el cual almacenara otra direccion (se puede hacer con cuantos '*' queramos)
     // Con 'new' reservamos memoria para otro puntero de tipo 'int'
+    // Se pueden definir tantos '*' como se quiera, resguardando reservar memoria correctamente y eleiminandola finalmente
 
     int num = 100;
 
-    *puntero = &num;
+    *puntero = &num; // Otraforma es con '*puntero = new int(100);'
 
     cout << "\nDireccion de memoria del puntero doble: " << &puntero << endl;
     cout << "\nValor (direccion) dentro del puntero doble: " << puntero << endl;
@@ -29,7 +30,8 @@ int main() {
 
     cout << "\nDireccion de memoria del numero " << num << ": " << &num << endl;
 
-    delete puntero;
+    delete *puntero; // Liberamos la memoria del entero
+    delete puntero; // Liberamos la memoria del puntero
 
     return 0;
 }

@@ -28,18 +28,20 @@ int main() {
     int total;
 
     cout << "\nIngrese el total de paices a registrar: "; cin >> total;
-    cin.ignore();
+    cin.ignore(); // Siempre antes de un cin.getline y despues de un cin
 
     for (int i = 0; i < total; i++) { // Con i accedemos a cada posicion del arreglo y con '.' accedemos a los atributos de cada elemento struct
         Paices[i].nombre = (char *) malloc(MAX * sizeof(char)); // Asignamos memoria para el nombre en cada elemento del arreglo
-        cout << "\nIngrese nombre del pais " << i + 1 << ": ";
+        
+        cout << "\nIngrese nombre del pais No" << i + 1 << ": ";
         cin.getline(Paices[i].nombre, MAX, '\n');
-        cout << "\nIngrese nombre de la capital del pais " << i + 1 << ": ";
+        
+        cout << "Ingrese nombre de la capital del pais No" << i + 1 << ": ";
         cin.getline(Paices[i].capital, MAX, '\n');
-        cout << "\nIngrese la cantidad de habitantes del pais (en millones): ";
+        
+        cout << "Ingrese la cantidad de habitantes del pais (en millones): ";
         cin >> Paices[i].habitantes;
-        cin.ignore(); // Siempre antesde usar un getline luego de haber usado cin
-        cout << endl;
+        cin.ignore();
     }
 
     mostrar_paices(Paices, total);
@@ -51,7 +53,7 @@ int main() {
 void mostrar_paices(PAIS p[], int n) {
 
     for (int i = 0; i < n; i++) {
-        cout << "\n======== Pais " << i + 1 << " =======================================================";
-        cout << "\nLa capital de " << p[i].nombre << " es " << p[i].capital << ", con un total de " << p[i].habitantes << " habitantes." << endl;
+        cout << "\n======== Pais " << i + 1 << " ============";
+        cout << "\nLa capital de " << p[i].nombre << " es " << p[i].capital << " y hay un total de " << p[i].habitantes << " habitantes en el pais." << endl;
     }
 }

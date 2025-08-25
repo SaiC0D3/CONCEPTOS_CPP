@@ -1,11 +1,13 @@
 /***********************************************************************************************
 * Programa: ISPRIME.h (archivo de cabecera, funciona como una libreria)
-* Objetivo: Determinar si un numero es primo o no
+* Objetivo: Funcion para determinar si un numero es primo o no
 * Fecha: 03 de febrero del 2025
 * Autor: Matías Olivares Morales
 * Compilador: g++ (MinGW.org GCC-6.3.0-1) 6.3.0
 * 
 ************************************************************************************************/
+
+// Si se definen librerias, al incluir este programa en otro con la extension '.h', se añaden tambien las librerias al nuevo programa
 
 int esPrimo(int num) { // Funcion que determina si un numero es primo o no (retorna 1 si es primo, 0 si no): podriamos usar un bool
 

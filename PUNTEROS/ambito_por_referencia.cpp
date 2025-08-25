@@ -15,8 +15,9 @@ void cambiar_valor(int &); // El parametro de la funcion recibe una direccion de
 
 int main() {
 
-    int *puntero = new int; // Variable que almacena direcciones de memoria (en hexadecimal) para variables de un cierto tipo
-    //                         se almacena en una direccion de memoria también por lo que se inicializa un espacio de memoria de tipo 'int' con 'new'
+    int *puntero = new int; 
+    // Variable que almacena direcciones de memoria (en hexadecimal) para variables de un cierto tipo se almacena...
+    // ...en una direccion de memoria también por lo que se inicializa un espacio de memoria de tipo 'int' con 'new'
     int a; // Se puede declarar junto al puntero de las formas: 'int *puntero, a;' o 'int* puntero, a;' (solo el primero es puntero)
 
     a = 100;
